@@ -203,3 +203,4 @@ yalc.lock
 # ignore env files and secrets
 .env*
 .env
+gitleaks-*.json
