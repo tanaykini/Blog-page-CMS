@@ -1,0 +1,9 @@
+# ignore test snapshots and fixtures that often contain fake tokens
+**/*.snap
+**/__snapshots__/**
+**/fixtures/**
+**/test/**/*
+**/tests/**/*
+apps/**/test/**/*
+apps/**/tests/**/*
+gitleaks-report.json
