@@ -1,104 +1,133 @@
-&nbsp;
-<p align="center">
-  <a href="https://ghost.org/#gh-light-mode-only" target="_blank">
-    <img src="https://user-images.githubusercontent.com/65487235/157884383-1b75feb1-45d8-4430-b636-3f7e06577347.png" alt="Ghost" width="200px">
-  </a>
-  <a href="https://ghost.org/#gh-dark-mode-only" target="_blank">
-    <img src="https://user-images.githubusercontent.com/65487235/157849205-aa24152c-4610-4d7d-b752-3a8c4f9319e6.png" alt="Ghost" width="200px">
-  </a>
-</p>
-&nbsp;
+# 📰 Blog Page CMS
 
-<p align="center">
-    <a href="https://ghost.org/">Ghost.org</a> •
-    <a href="https://forum.ghost.org">Forum</a> •
-    <a href="https://ghost.org/docs/">Docs</a> •
-    <a href="https://github.com/TryGhost/Ghost/blob/main/.github/CONTRIBUTING.md">Contributing</a> •
-    <a href="https://twitter.com/ghost">Twitter</a>
-    <br /><br />
-    <a href="https://ghost.org/">
-        <img src="https://img.shields.io/badge/downloads-100M+-brightgreen.svg" alt="Downloads" />
-    </a>
-    <a href="https://github.com/TryGhost/Ghost/releases/">
-        <img src="https://img.shields.io/github/release/TryGhost/Ghost.svg" alt="Latest release" />
-    </a>
-    <a href="https://github.com/TryGhost/Ghost/actions">
-        <img src="https://github.com/TryGhost/Ghost/workflows/CI/badge.svg?branch=main" alt="Build status" />
-    </a>
-    <a href="https://github.com/TryGhost/Ghost/contributors/">
-        <img src="https://img.shields.io/github/contributors/TryGhost/Ghost.svg" alt="Contributors" />
-    </a>
-</p>
+This project serves as a **personal portfolio build**, showcasing back-end architecture, modular design, and CMS functionality — all deployable on **Vercel**.
 
-&nbsp;
+---
 
-> [!NOTE]
-> Love open source? We're hiring! Ghost is looking staff engineers to [join the team](https://careers.ghost.org) and work with us full-time
+## ✨ Overview
 
-<a href="https://ghost.org/"><img src="https://user-images.githubusercontent.com/353959/169805900-66be5b89-0859-4816-8da9-528ed7534704.png" alt="Fiercely independent, professional publishing. Ghost is the most popular open source, headless Node.js CMS which already works with all the tools you know and love." /></a>
+Blog Page CMS provides a fast, simple, and developer-friendly foundation for publishing and managing blog content.
+It’s built with scalability in mind and supports API-driven extensions and theming — making it ideal for personal sites, documentation hubs, or content platforms.
 
-&nbsp;
+---
 
-<a href="https://ghost.org/pricing/#gh-light-mode-only" target="_blank"><img src="https://user-images.githubusercontent.com/65487235/157849437-9b8fcc48-1920-4b26-a1e8-5806db0e6bb9.png" alt="Ghost(Pro)" width="165px" /></a>
-<a href="https://ghost.org/pricing/#gh-dark-mode-only" target="_blank"><img src="https://user-images.githubusercontent.com/65487235/157849438-79889b04-b7b6-4ba7-8de6-4c1e4b4e16a5.png" alt="Ghost(Pro)" width="165px" /></a>
+## 🚀 Features
 
-The easiest way to get a production instance deployed is with our official **[Ghost(Pro)](https://ghost.org/pricing/)** managed service. It takes about 2 minutes to launch a new site with worldwide CDN, backups, security and maintenance all done for you.
+* ⚡ **Fast Node.js backend** — built on Express
+* 🧩 **Modular structure** for easy customization
+* 🗞️ **Content management** for posts, tags, and users
+* 🧭 **Admin interface** (custom Ghost Admin base)
+* 🔒 **Secure authentication** with session & JWT options
+* 🌍 **SEO-optimized** URLs and metadata
+* ⚙️ **Docker-ready** setup for quick local deployment
+* ☁️ **Deployable on Vercel** with one click
 
-For most people this ends up being the best value option because of [how much time it saves](https://ghost.org/docs/hosting/) — and 100% of revenue goes to the Ghost Foundation; funding the maintenance and further development of the project itself. So you’ll be supporting open source software *and* getting a great service!
+---
 
-&nbsp;
+## 🧠 Tech Stack
 
-# Quickstart install
+| Layer          | Technologies          |
+| -------------- | --------------------- |
+| **Core**       | Node.js, Express      |
+| **CMS Base**   | Ghost framework (MIT) |
+| **Database**   | SQLite / MySQL        |
+| **Auth**       | JWT & session-based   |
+| **UI Engine**  | Handlebars            |
+| **Deployment** | Vercel, Docker        |
+| **Language**   | JavaScript (ES2022)   |
 
-If you want to run your own instance of Ghost, in most cases the best way is to use our **CLI tool**
+---
 
-```
-npm install ghost-cli -g
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/tanaykini/Blog-page-CMS.git
+cd Blog-page-CMS
 ```
 
-&nbsp;
+### 2️⃣ Install dependencies
 
-Then, if installing locally add the `local` flag to get up and running in under a minute - [Local install docs](https://ghost.org/docs/install/local/)
-
-```
-ghost install local
+```bash
+npm install
 ```
 
-&nbsp;
+### 3️⃣ Configure environment variables
 
-or on a server run the full install, including automatic SSL setup using LetsEncrypt - [Production install docs](https://ghost.org/docs/install/ubuntu/)
+Create a `.env` file in the project root:
+
+```env
+PORT=2368
+NODE_ENV=development
+DATABASE_URL=sqlite://content/data/blog.db
+```
+
+*(Your `.env` is already ignored by Git — safe to use for local secrets.)*
+
+### 4️⃣ Run locally
+
+```bash
+npm run dev
+```
+
+Visit **[http://localhost:2368](http://localhost:2368)** to view your CMS dashboard.
+
+---
+
+## 🌐 Deploying to Vercel
+
+You can deploy this project instantly using [Vercel](https://vercel.com):
+
+1. Push your repo to GitHub (you’ve already done this 🎉).
+2. Go to [vercel.com/import](https://vercel.com/import) and select your repository.
+3. Configure your environment variables in the dashboard.
+4. Click **Deploy** — and you’re live 🚀.
+
+---
+
+## 🧱 Project Structure
 
 ```
-ghost install
+.
+├── apps/               # Frontend & admin apps
+├── ghost/              # Core Ghost engine
+├── content/            # Data, images, themes
+├── config/             # Configuration files
+├── .docker/            # Docker environment setup
+├── .github/            # CI/CD workflows
+├── LICENSE             # MIT license (from Ghost)
+└── README.md           # Project documentation
 ```
 
-&nbsp;
+---
 
-Check out our [official documentation](https://ghost.org/docs/) for more information about our [recommended hosting stack](https://ghost.org/docs/hosting/) & properly [upgrading Ghost](https://ghost.org/docs/update/), plus everything you need to develop your own Ghost [themes](https://ghost.org/docs/themes/) or work with [our API](https://ghost.org/docs/content-api/).
+## 📦 Common Commands
 
-### Contributors & advanced developers
+| Command         | Description                |
+| --------------- | -------------------------- |
+| `npm run dev`   | Start in development mode  |
+| `npm start`     | Run the CMS in production  |
+| `npm test`      | Run unit/integration tests |
+| `npm run build` | Build admin & core assets  |
 
-For anyone wishing to contribute to Ghost or to hack/customize core files we recommend following our full development setup guides: [Contributor guide](https://ghost.org/docs/contributing/) • [Developer setup](https://ghost.org/docs/install/source/)
+---
 
-&nbsp;
+## 🧭 Roadmap
 
-# Ghost sponsors
+* [ ] Add markdown editor improvements
+* [ ] Enable API-based theme switching
+* [ ] Integrate image uploads with Cloudinary
+* [ ] Add content scheduling & drafts
+* [ ] Optional Next.js frontend integration
 
-A big thanks to our sponsors and partners who make Ghost possible. If you're interested in sponsoring Ghost and supporting the project, please check out our profile on [GitHub sponsors](https://github.com/sponsors/TryGhost) :heart:
+---
 
-**[DigitalOcean](https://m.do.co/c/9ff29836d717)** • **[Fastly](https://www.fastly.com/)** • **[Tinybird](https://tbrd.co/ghost)**
+## 📄 License & Attribution
 
-&nbsp;
+Ghost is licensed under the **MIT License** — see the `LICENSE` file for details.
+Custom modifications and configuration © 2025 **Tanay Kini**.
 
-# Getting help
+---
 
-Everyone can get help and support from a large community of developers over on the [Ghost forum](https://forum.ghost.org/). **Ghost(Pro)** customers have access to 24/7 email support.
-
-To stay up to date with all the latest news and product updates, make sure you [subscribe to our changelog newsletter](https://ghost.org/changelog/) — or follow us [on Twitter](https://twitter.com/Ghost), if you prefer your updates bite-sized and facetious. :saxophone::turtle:
-
-&nbsp;
-
-# Copyright & license
-
-Copyright (c) 2013-2025 Ghost Foundation - Released under the [MIT license](LICENSE).
-Ghost and the Ghost Logo are trademarks of Ghost Foundation Ltd. Please see our [trademark policy](https://ghost.org/trademark/) for info on acceptable usage.
+> 🧠 *“Build. Write. Iterate.”* — A personal experiment in crafting a better publishing workflow.
