@@ -199,3 +199,7 @@ yalc.lock
 /e2e/playwright
 /e2e/data
 .env.tinybird
+
+# ignore env files and secrets
+.env*
+.env
