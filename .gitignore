@@ -205,3 +205,4 @@ yalc.lock
 .env
 gitleaks-*.json
 gitleaks-*.json
+gitleaks-*.tsv
