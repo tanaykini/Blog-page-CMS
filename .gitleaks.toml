@@ -1,0 +1,22 @@
+title = "repo gitleaks config"
+
+# Use the builtin default rules and extend them
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ignore test snapshots, fixtures and gitleaks report"
+# regexTarget can be "match" (default) or "file" to apply regexes to file paths
+regexTarget = "file"
+
+# paths (regexes) to ignore — adjust if you want to keep any of these scanned
+paths = [
+  '''.*\.snap$''',                       # snapshot files
+  '''.*/__snapshots__/.*''',
+  '''.*/fixtures/.*''',
+  '''.*/tests?/.*''',                    # /test/ or /tests/
+  '''apps/.*/test/.*''',
+  '''apps/.*/tests/.*''',
+  '''^gitleaks-report\.json$''',         # ignore the report file
+  '''^gitleaks-working\.json$'''
+]
